@@ -1,0 +1,15 @@
+# Default ignored files
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+.gradle
+build/
+*/build/
+
+.docker
+
+.project
