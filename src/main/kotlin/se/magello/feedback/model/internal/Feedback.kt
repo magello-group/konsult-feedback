@@ -1,5 +1,14 @@
 package se.magello.feedback.model.internal
 
-import org.springframework.data.annotation.Id
+import jakarta.persistence.*
 
-data class Feedback(@Id val userId: String?) {}
+@Entity
+class Feedback(
+  @Column(nullable = false)
+  val userId: String? = null,
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  val id: Int? = null
+  ) {}
+
