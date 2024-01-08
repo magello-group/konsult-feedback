@@ -21,11 +21,19 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
+	implementation("org.springframework.security:spring-security-oauth2-resource-server")
+	implementation("org.springframework.security:spring-security-oauth2-jose")
+	implementation("org.springframework.security:spring-security-config")
+
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("com.h2database:h2:2.2.224")
+	runtimeOnly("com.h2database:h2:2.2.224")
 }
 
 tasks.withType<KotlinCompile> {
